@@ -25,6 +25,7 @@ export function ProjectSummary({
   index,
   title,
   description,
+  technologies,
   model,
   buttonText,
   buttonLink,
@@ -88,6 +89,9 @@ export function ProjectSummary({
         </Heading>
         <Text className={styles.description} data-visible={visible} as="p">
           {description}
+        </Text>
+        <Text className={styles.technologies} data-visible={visible} as="p">
+          {technologies}
         </Text>
         <div className={styles.button} data-visible={visible}>
           <Button iconHoverShift href={buttonLink} iconEnd="arrow-right">

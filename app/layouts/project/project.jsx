@@ -15,6 +15,7 @@ const initDelay = 300;
 export function ProjectHeader({
   title,
   description,
+  technologies,
   linkLabel = 'Visit website',
   url,
   roles,
@@ -32,6 +33,9 @@ export function ProjectHeader({
           </Heading>
           <Text className={styles.description} size="xl" as="p">
             {description}
+          </Text>
+          <Text className={styles.technologies} size="xl" as="p">
+            {technologies}
           </Text>
           {!!url && (
             <Button

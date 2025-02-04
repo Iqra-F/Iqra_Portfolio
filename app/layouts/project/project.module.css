@@ -278,6 +278,16 @@
         calc(var(--initDelay) + 100ms) forwards;
     }
   }
+  .technologies {
+    padding-bottom: var(--spaceL);
+
+    @media (--mediaUseMotion) {
+      opacity: 0;
+      animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin)
+        calc(var(--initDelay) + 100ms) forwards;
+    }
+  }
+
 
   .linkButton {
     padding-left: var(--spaceXS);

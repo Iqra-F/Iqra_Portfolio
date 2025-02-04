@@ -7,6 +7,9 @@ import gamestackTexture from '~/assets/gamestack-login.jpg';
 import sliceTextureLarge from '~/assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
 import sliceTexture from '~/assets/slice-app.jpg';
+import ChatAPP from '~/assets/chatapp.jpg';
+import Bookstore from '~/assets/bookstore.jpg';
+import Netflix from '~/assets/netflix.jpg';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
@@ -103,8 +106,9 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Coffee Chronicles - Next.js Coffee Shop "
-        description="Crafted a stylish and responsive coffee shop website using Next.js, incorporating animations to enhance the user experience."
+        title="Coffee Chronicles - Modern Coffee Shop Website"
+        description="Built a visually appealing and fully responsive coffee shop website with smooth scroll animations. Integrated engaging AOS animations to enhance the user experience."
+        technologies= "Next.js, Tailwind CSS, AOS (Animate on Scroll)"
         buttonText="View Project"
         buttonLink="https://iqra-coffee-shop.vercel.app/"
         model={{
@@ -123,8 +127,9 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Buycex - Cryptocurrency Platform"
+        title="Buycex - Cryptocurrency Exchange Platform"
         description="Frontend contribution to an innovative cryptocurrency website in collaboration with the Buycex team, delivering a seamless user interface."
+        technologies= "React.js, Tailwind CSS"
         buttonText="View Project"
         buttonLink="https://buycex.vercel.app/"
         model={{
@@ -143,8 +148,9 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Euphoria - Full-Stack E-Commerce Solution"
-        description="Designed and developed both the frontend and backend of a dynamic e-commerce site using Next.js, integrating AI for enhanced user experiences."
+        title="Euphoria - Full-Stack AI-Powered E-Commerce Platform"
+        description="Developing a feature-rich e-commerce site with AI functionalities to provide personalized product recommendations. Implementing secure backend services and optimizing the frontend for a smooth shopping experience."
+        technologies= "Next.js, MongoDB, Tailwind CSS"
         buttonText="View project"
         buttonLink="https://euphoria-cloth.vercel.app/cpanel/dashboard"
         model={{
@@ -153,6 +159,69 @@ export const Home = () => {
           textures: [
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+       <ProjectSummary
+        id="project-4"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={4}
+        title="Netflix - Movie Streaming Website"
+        description="Created a responsive movie streaming platform fetching real-time data for the latest movies from an external API. Implemented secure user authentication with Firebase."
+        technologies= "React.js, Firebase, Tailwind CSS"
+        buttonText="View project"
+        buttonLink="https://netflixreactjs-608a0.firebaseapp.com/"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${Netflix} 800w, ${Netflix} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-5"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={5}
+        title="VibeChat - Real-Time Chat Application"
+        description="Developed a dynamic chat application with real-time messaging using WebSockets. Built a responsive frontend and scalable backend to ensure seamless communication."
+        technologies= "React.js, Node.js, Express.js, MongoDB, WebSockets"
+        buttonText="View project"
+        buttonLink="https://github.com/Iqra-F/VibeChat-MERN-ChatApp"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${ChatAPP} 800w, ${ChatAPP} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+       <ProjectSummary
+        id="project-6"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
+        index={6}
+        title="Full-Stack Bookstore Application"
+        description="Built a comprehensive online bookstore with features to view and manage book categories. Developed a robust backend and user-friendly UI."
+        technologies="React.js, Node.js, Express.js, MongoDB, Tailwind CSS"
+        buttonText="View project"
+        buttonLink="https://github.com/Iqra-F/BookStore-using-MERN-stack"
+        model={{
+          type: 'laptop',
+          alt: 'Annotating a biomedical image in the Slice app',
+          textures: [
+            {
+              srcSet: `${Bookstore} 800w, ${Bookstore} 1920w`,
               placeholder: sliceTexturePlaceholder,
             },
           ],
