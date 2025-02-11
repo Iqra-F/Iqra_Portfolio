@@ -1,8 +1,8 @@
 {
   "name": "Iqra's portfolio",
-  "homepage": "https://hamishw.com",
+  "homepage": "https://Iqra.com",
   "description": "Portfolio site for Iqra Fatima",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/iqra/portfolio.git",
   "author": "Iqra Fatima",
   "sideEffects": false,
   "type": "module",

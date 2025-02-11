@@ -6,6 +6,6 @@ addons.setConfig({
     ...themes.dark,
     brandImage: './icon.svg',
     brandTitle: 'Iqra Fatima Components',
-    brandUrl: 'https://hamishw.com',
+    brandUrl: 'https://Iqra.com',
   },
 });
