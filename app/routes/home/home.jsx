@@ -152,7 +152,7 @@ export const Home = () => {
         description="Developing a feature-rich e-commerce site with AI functionalities to provide personalized product recommendations. Implementing secure backend services and optimizing the frontend for a smooth shopping experience."
         technologies= "Next.js, MongoDB, Tailwind CSS"
         buttonText="View project"
-        buttonLink="https://euphoria-cloth.vercel.app/cpanel/dashboard"
+        buttonLink="https://euphoria-cloth.vercel.app/men"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
