@@ -1,32 +1,56 @@
 import { forwardRef, useId } from 'react';
 import { classes } from '~/utils/style';
 import styles from './monogram.module.css';
+import logo from '/iqra-logo.png';
+
+// export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => {
+//   const id = useId();
+//   const clipId = `${id}monogram-clip`;
+
+//   return (
+//     <svg
+//       aria-hidden
+//       className={classes(styles.monogram, className)}
+//       width="48"
+//       height="29"
+//       viewBox="0 0 782 817"
+//       ref={ref}
+//       {...props}
+//     >
+//       <defs>
+//         <clipPath id={clipId}>
+//           <path d="M 2 117 L 1 118 L 3 120 L 3 121 L 13 131 L 13 132 L 21 140 L 21 141 L 29 149 L 29 150 L 38 159 L 38 160 L 44 166 L 44 167 L 49 172 L 49 555 L 48 556 L 48 745 L 49 746 L 49 759 L 44 764 L 44 765 L 37 772 L 37 773 L 30 780 L 30 781 L 24 787 L 24 788 L 16 796 L 16 797 L 10 803 L 10 804 L 4 810 L 4 811 L 0 815 L 25 815 L 26 816 L 161 816 L 161 519 L 160 518 L 163 515 L 164 515 L 167 512 L 168 512 L 169 511 L 170 511 L 172 509 L 173 509 L 175 507 L 176 507 L 178 505 L 179 505 L 180 504 L 181 504 L 183 502 L 184 502 L 185 501 L 186 501 L 188 499 L 189 499 L 191 497 L 192 497 L 193 496 L 194 496 L 196 494 L 197 494 L 198 493 L 199 493 L 201 491 L 202 491 L 204 489 L 205 489 L 206 488 L 207 488 L 209 486 L 210 486 L 212 484 L 213 484 L 214 483 L 215 483 L 217 481 L 218 481 L 219 480 L 220 480 L 222 478 L 223 478 L 225 476 L 226 476 L 227 475 L 228 475 L 230 473 L 231 473 L 233 471 L 234 471 L 236 469 L 237 469 L 239 467 L 240 467 L 242 465 L 243 465 L 245 463 L 246 463 L 248 461 L 249 461 L 251 459 L 252 459 L 254 457 L 255 457 L 257 455 L 258 455 L 260 453 L 261 453 L 263 451 L 264 451 L 266 449 L 267 449 L 269 447 L 270 447 L 272 445 L 273 445 L 275 443 L 276 443 L 278 441 L 279 441 L 281 439 L 282 439 L 284 437 L 285 437 L 287 435 L 288 435 L 290 433 L 291 433 L 293 431 L 294 431 L 296 429 L 297 429 L 299 427 L 300 427 L 302 425 L 303 425 L 305 423 L 306 423 L 308 421 L 309 421 L 311 419 L 312 419 L 314 417 L 315 417 L 317 415 L 318 415 L 320 413 L 321 413 L 323 411 L 324 411 L 326 409 L 327 409 L 329 407 L 330 407 L 332 405 L 333 405 L 335 403 L 336 403 L 338 401 L 339 401 L 341 399 L 342 399 L 344 397 L 345 397 L 347 395 L 348 395 L 350 393 L 351 393 L 353 391 L 354 391 L 356 389 L 357 389 L 359 387 L 360 387 L 362 385 L 363 385 L 365 383 L 366 383 L 368 381 L 369 381 L 371 379 L 372 379 L 374 377 L 375 377 L 377 375 L 378 375 L 380 373 L 381 373 L 383 371 L 384 371 L 386 369 L 387 369 L 389 367 L 390 367 L 392 365 L 393 365 L 395 363 L 396 363 L 398 361 L 399 361 L 401 359 L 402 359 L 404 357 L 405 357 L 407 355 L 408 355 L 410 353 L 411 353 L 413 351 L 414 351 L 416 349 L 417 349 L 419 347 L 420 347 L 422 345 L 423 345 L 425 343 L 426 343 L 428 341 L 429 341 L 431 339 L 432 339 L 434 337 L 435 337 L 437 335 L 438 335 L 440 333 L 441 333 L 443 331 L 444 331 L 446 329 L 447 329 L 449 327 L 450 327 L 452 325 L 453 325 L 455 323 L 456 323 L 458 321 L 459 321 L 461 319 L 462 319 L 464 317 L 465 317 L 467 315 L 468 315 L 470 313 L 471 313 L 473 311 L 474 311 L 476 309 L 477 309 L 479 307 L 480 307 L 482 305 L 483 305 L 485 303 L 486 303 L 488 301 L 489 301 L 491 299 L 492 299 L 494 297 L 495 297 L 497 295 L 498 295 L 500 293 L 501 293 L 503 291 L 504 291 L 506 289 L 507 289 L 509 287 L 510 287 L 512 285 L 513 285 L 515 283 L 516 283 L 518 281 L 519 281 L 521 279 L 522 279 L 524 277 L 525 277 L 527 275 L 528 275 L 530 273 L 531 273 L 533 271 L 534 271 L 536 269 L 537 269 L 539 267 L 540 267 L 542 265 L 543 265 L 545 263 L 546 263 L 548 261 L 549 261 L 551 259 L 552 259 L 554 257 L 555 257 L 557 255 L 558 255 L 560 253 L 561 253 L 563 251 L 564 251 L 566 249 L 567 249 L 569 247 L 570 247 L 572 245 L 573 245 L 575 243 L 576 243 L 578 241 L 579 241 L 581 239 L 582 239 L 584 237 L 585 237 L 587 235 L 588 235 L 590 233 L 591 233 L 593 231 L 594 231 L 596 229 L 597 229 L 599 227 L 600 227 L 602 225 L 603 225 L 605 223 L 606 223 L 608 221 L 609 221 L 611 219 L 612 219 L 614 217 L 615 217 L 617 215 L 618 215 L 620 213 L 621 213 L 623 211 L 624 211 L 626 209 L 627 209 L 629 207 L 630 207 L 632 205 L 633 205 L 635 203 L 636 203 L 638 201 L 639 201 L 641 199 L 642 199 L 644 197 L 645 197 L 647 195 L 648 195 L 650 193 L 651 193 L 653 191 L 654 191 L 656 189 L 657 189 L 659 187 L 660 187 L 662 185 L 663 185 L 665 183 L 666 183 L 668 181 L 669 181 L 671 179 L 672 179 L 674 177 L 675 177 L 677 175 L 678 175 L 680 173 L 681 173 L 683 171 L 684 171 L 686 169 L 687 169 L 688 426 Z" />
+//         </clipPath>
+//       </defs>
+//       <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />
+//       {highlight && (
+//         <g clipPath={`url(#${clipId})`}>
+//           <rect className={styles.highlight} width="100%" height="100%" />
+//         </g>
+//       )}
+//     </svg>
+//   );
+// });
+
+
 
 export const Monogram = forwardRef(({ highlight, className, ...props }, ref) => {
-  const id = useId();
-  const clipId = `${id}monogram-clip`;
-
   return (
-    <svg
-      aria-hidden
-      className={classes(styles.monogram, className)}
-      width="48"
-      height="29"
-      viewBox="0 0 48 29"
+    <div
+      className={classes(styles.monogramWrapper, className)}
       ref={ref}
       {...props}
+      style={{backgroundColor: highlight ? "rgba(239, 233, 233, 0.9)" : "transparent", borderRadius: "30%"}}
     >
-      <defs>
-        <clipPath id={clipId}>
-          <path d="M0 0h6.5a6 6 0 0 1 5.2 3.1L19.4 17l4-9L19 0h6.5a6 6 0 0 1 5.2 3.1L39.5 19 35 29 24.5 10 16 29 0 0Zm46.7 2.8A2 2 0 0 0 45 0h-7l5.5 10 3.2-7.2Z" />
-        </clipPath>
-      </defs>
-      <rect clipPath={`url(#${clipId})`} width="100%" height="100%" />
-      {highlight && (
-        <g clipPath={`url(#${clipId})`}>
-          <rect className={styles.highlight} width="100%" height="100%" />
-        </g>
-      )}
-    </svg>
+      <img
+        src={logo}
+        alt="Iqra Monogram"
+        className={classes(styles.monogram, highlight && styles.highlighted)}
+        style={{
+          width: "40px",
+          height: "40px",
+        }}
+      />
+    </div>
   );
 });

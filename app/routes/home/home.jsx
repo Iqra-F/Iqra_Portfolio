@@ -1,13 +1,14 @@
 import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
 import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
 import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
+import gamestackTextureLarge from '~/assets/gamestack-login-large.png';
+import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.png';
+import gamestackTexture from '~/assets/gamestack-login.png';
+import sliceTextureLarge from '~/assets/slice-app-large.png';
 import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
-import ChatAPP from '~/assets/chatapp.jpg';
+import sliceTexture from '~/assets/slice-app.png';
+import ChatAPP from '~/assets/chatapp.png';
+import Chatbot from '~/assets/Chatbot.png';
 import Bookstore from '~/assets/bookstore.jpg';
 import Netflix from '~/assets/netflix.jpg';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
@@ -56,10 +57,14 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
+  const projectFive = useRef();
+  const projectSix = useRef();
+
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -101,22 +106,22 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-      <ProjectSummary
+       <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Coffee Chronicles - Modern Coffee Shop Website"
-        description="Built a visually appealing and fully responsive coffee shop website with smooth scroll animations. Integrated engaging AOS animations to enhance the user experience."
-        technologies= "Next.js, Tailwind CSS, AOS (Animate on Scroll)"
+        title="AI Chatbot Template for Educational & Business Websites"
+        description="Delivered a reusable AI chatbot template with a sleek UI, smart prompt suggestions, and educational support features — ideal for homework help, customer support, or knowledge bases."
+        technologies= "HTML, CSS, JavaScript, OpenAI API"
         buttonText="View Project"
-        buttonLink="https://iqra-coffee-shop.vercel.app/"
+        buttonLink="https://homeworkifyeu.com/app/"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'Chatbot',
           textures: [
             {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              srcSet: `${Chatbot} 1280w, ${Chatbot} 2560w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -134,7 +139,7 @@ export const Home = () => {
         buttonLink="https://buycex.vercel.app/"
         model={{
           type: 'laptop',
-          alt: 'App screen',
+          alt: 'Buycex',
           textures: [
             {
               srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
@@ -148,14 +153,14 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Euphoria - Full-Stack AI-Powered E-Commerce Platform"
-        description="Developing a feature-rich e-commerce site with AI functionalities to provide personalized product recommendations. Implementing secure backend services and optimizing the frontend for a smooth shopping experience."
-        technologies= "Next.js, MongoDB, Tailwind CSS"
+        title="Euphoria – E-Commerce Platform with AI Chatbot and Dashboards"
+        description="Co-developed a full-featured e-commerce platform in collaboration with a developer. Highlights include NextAuth authentication, product filtering, grid/list views, AI chatbot for user support, admin and user dashboards, payment gateway, shopping cart, wishlist, and profile editing, showcasing both technical skills and teamwork."
+        technologies= "Next.js, MongoDB, Tailwind CSS, Cloudinary"
         buttonText="View project"
-        buttonLink="https://euphoria-cloth.vercel.app/cpanel/dashboard"
+        buttonLink="https://euphoria-cloth.vercel.app/men"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Euphoria',
           textures: [
             {
               srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
@@ -165,6 +170,27 @@ export const Home = () => {
         }}
       />
        <ProjectSummary
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="Coffee Chronicles - Modern Coffee Shop Website"
+        description="Built a visually appealing and fully responsive coffee shop website with smooth scroll animations. Integrated engaging AOS animations to enhance the user experience."
+        technologies= "Next.js, Tailwind CSS, AOS (Animate on Scroll)"
+        buttonText="View Project"
+        buttonLink="https://iqra-coffee-shop.vercel.app/"
+        model={{
+          type: 'laptop',
+          alt: 'Coffee Shop',
+          textures: [
+            {
+              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+       {/* <ProjectSummary
         id="project-4"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
@@ -184,20 +210,20 @@ export const Home = () => {
             },
           ],
         }}
-      />
+      /> */}
       <ProjectSummary
         id="project-5"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
         index={5}
         title="VibeChat - Real-Time Chat Application"
         description="Developed a dynamic chat application with real-time messaging using WebSockets. Built a responsive frontend and scalable backend to ensure seamless communication."
-        technologies= "React.js, Node.js, Express.js, MongoDB, WebSockets"
+        technologies= "React.js, Node.js, Express.js, MongoDB, WebSockets(for message notifications)"
         buttonText="View project"
         buttonLink="https://github.com/Iqra-F/VibeChat-MERN-ChatApp"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'VibeChat',
           textures: [
             {
               srcSet: `${ChatAPP} 800w, ${ChatAPP} 1920w`,
@@ -208,8 +234,8 @@ export const Home = () => {
       />
        <ProjectSummary
         id="project-6"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
         index={6}
         title="Full-Stack Bookstore Application"
         description="Built a comprehensive online bookstore with features to view and manage book categories. Developed a robust backend and user-friendly UI."
@@ -218,7 +244,7 @@ export const Home = () => {
         buttonLink="https://github.com/Iqra-F/BookStore-using-MERN-stack"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'BookStore',
           textures: [
             {
               srcSet: `${Bookstore} 800w, ${Bookstore} 1920w`,

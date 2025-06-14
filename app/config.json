@@ -1,11 +1,11 @@
 {
   "name": "Iqra Fatima",
   "role": "Developer",
-  "disciplines": ["Frontend", "Backend", "MERN Stack", "MENN Stack"],
+  "disciplines": ["Frontend", "Backend", "MERN Stack","TypeScript", "React.js", "Next.js", "Node.js"],
   "url": "https://Iqra.com",
   "bluesky": "Iqra.com",
-  "figma": "@Hamish",
-  "github": "Iqra-F",
-  "repo": "https://github.com/HamishMW/portfolio",
-  "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
+  "figma": "@Iqra",
+  "github": "https://github.com/Iqra-F",
+  "repo": "https://github.com/Iqra-F/portfolio",
+  "ascii": " ___    _____ \n|_ _|  |  ___|\n | |   | |_   \n | |   |  _|  \n|___|  |_|    \n"
 }
