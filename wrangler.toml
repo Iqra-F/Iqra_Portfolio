@@ -1,12 +1,4 @@
 name = "iqra-portfolio"
 compatibility_date = "2023-12-01"
 
-# If you need KV storage, keep this
-kv_namespaces = [
-  { binding = "MY_KV", id = "MY_KV" }
-]
-
-[vars]
-RESEND_API_KEY = "re_XXXX"
-RESEND_FROM = "onboarding@resend.dev"
-RESEND_TO = "iqraf683@gmail.com"
+pages_build_output_dir = "./build/client"
