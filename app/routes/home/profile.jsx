@@ -21,7 +21,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="2" as="p">
-    I’m a Full Stack Developer with a track record of building real-world web applications, SaaS platforms, dashboards, and AI-powered tools that solve real business problems. I’ve successfully collaborated with clients, teams, and companies—often through freelance and contract projects—to deliver clean, scalable, and results-driven solutions. <br/> 
+    I’m a Full Stack Developer with a track record of building real-world web applications, SaaS platforms, dashboards, and AI-powered tools that solve real business problems. I’ve successfully collaborated with clients, teams, and companies—often through freelance and contract projects—to deliver clean, secure, and results-driven solutions. <br/> 
    </Text>
     <Heading className={styles.title} data-visible={visible} level={6} id={titleId}>
       <DecoderText text=" My stack (frontend and backend):" start={visible} delay={500} />
@@ -29,25 +29,25 @@ const ProfileText = ({ visible, titleId }) => (
     <Text className={styles.description} data-visible={visible} size="2" as="p">
 
     ‣ 𝙁𝙧𝙤𝙣𝙩𝙚𝙣𝙙 –
- React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Bootstrap, Material UI, Chakra UI, Shadcn/UI, Redux, Figma-to-Code conversions
+ React.js, Next.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS, Bootstrap, Material UI, Chakra UI, Shadcn/UI, Redux, RTK Query, Figma-to-Code conversions
  <br/>
  ‣ 𝘽𝙖𝙘𝙠𝙚𝙣𝙙 –
- Node.js, Express.js, MongoDB, Firebase, Supabase, Prisma, Mongoose, SQL, REST APIs, JWT Auth, WebSockets, and Payment Integrations (Stripe, PayPal, Razorpay)
+ Node.js, Express.js, MongoDB, Firebase, Supabase, Prisma, Mongoose, SQL, REST APIs, JWT Auth, Jest, WebSockets, and Payment Integrations (Stripe, PayPal, Razorpay)
 <br/>
 ‣ 𝘼𝙄 & 𝙊𝙩𝙝𝙚𝙧𝙨 –
- AI App Integration (OpenAI/ChatGPT), Git, GitHub, Vercel
+ AI App Integration (OpenAI/ChatGPT), Git, GitHub, Vercel, Netlify, Render, Railway, AWS etc.
   </Text>   
  <Heading className={styles.title} data-visible={visible} level={6} id={titleId}>
       <DecoderText text=" What I’ve Built:" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="2" as="p">
  ‣ AI-integrated e-commerce platforms with secure auth and payments<br/>
-
  ‣ Custom dashboards with role-based access<br/>
- ‣ Real-time chat and booking applications and landing pages<br/>
+ ‣ Real-time chat and booking applications, Portfolios and landing pages<br/>
  ‣ SaaS products and custom API-driven tools <br/>
  ‣ Figma-to-Code conversions 
    <br/>
+   ‣ AI ChatBots  <br/>
 📩 Feel free to reach out if you are looking to collaborate or need a reliable developer for your next project.  
 </Text> 
   </Fragment>

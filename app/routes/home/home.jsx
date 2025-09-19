@@ -10,6 +10,7 @@ import sliceTexture from '~/assets/slice-app.png';
 import ChatAPP from '~/assets/chatapp.png';
 import Chatbot from '~/assets/Chatbot.png';
 import Bookstore from '~/assets/bookstore.jpg';
+import taskApp from '~/assets/taskApp.jpg';
 import Netflix from '~/assets/netflix.jpg';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
@@ -60,11 +61,22 @@ export const Home = () => {
   const projectFour = useRef();
   const projectFive = useRef();
   const projectSix = useRef();
+  const projectSeven = useRef();
 
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, details];
+    const sections = [
+      intro,
+      projectOne,
+      projectTwo,
+      projectThree,
+      projectFour,
+      projectFive,
+      projectSix,
+      projectSeven,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -106,14 +118,14 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-       <ProjectSummary
+      <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="AI Chatbot Template for Educational & Business Websites"
         description="Delivered a reusable AI chatbot template with a sleek UI, smart prompt suggestions, and educational support features — ideal for homework help, customer support, or knowledge bases."
-        technologies= "HTML, CSS, JavaScript, OpenAI API"
+        technologies="HTML, CSS, JavaScript, OpenAI API"
         buttonText="View Project"
         buttonLink="https://homeworkifyeu.com/app/"
         model={{
@@ -134,7 +146,7 @@ export const Home = () => {
         index={2}
         title="Buycex - Cryptocurrency Exchange Platform"
         description="Frontend contribution to an innovative cryptocurrency website in collaboration with the Buycex team, delivering a seamless user interface."
-        technologies= "React.js, Tailwind CSS"
+        technologies="React.js, Tailwind CSS"
         buttonText="View Project"
         buttonLink="https://buycex.vercel.app/"
         model={{
@@ -155,7 +167,7 @@ export const Home = () => {
         index={3}
         title="Euphoria – E-Commerce Platform with AI Chatbot and Dashboards"
         description="Co-developed a full-featured e-commerce platform in collaboration with a developer. Highlights include NextAuth authentication, product filtering, grid/list views, AI chatbot for user support, admin and user dashboards, payment gateway, shopping cart, wishlist, and profile editing, showcasing both technical skills and teamwork."
-        technologies= "Next.js, MongoDB, Tailwind CSS, Cloudinary"
+        technologies="Next.js, MongoDB, Tailwind CSS, Cloudinary"
         buttonText="View project"
         buttonLink="https://euphoria-cloth.vercel.app/men"
         model={{
@@ -169,14 +181,14 @@ export const Home = () => {
           ],
         }}
       />
-       <ProjectSummary
+      <ProjectSummary
         id="project-4"
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
         title="Coffee Chronicles - Modern Coffee Shop Website"
         description="Built a visually appealing and fully responsive coffee shop website with smooth scroll animations. Integrated engaging AOS animations to enhance the user experience."
-        technologies= "Next.js, Tailwind CSS, AOS (Animate on Scroll)"
+        technologies="Next.js, Tailwind CSS, AOS (Animate on Scroll)"
         buttonText="View Project"
         buttonLink="https://iqra-coffee-shop.vercel.app/"
         model={{
@@ -190,7 +202,7 @@ export const Home = () => {
           ],
         }}
       />
-       {/* <ProjectSummary
+      {/* <ProjectSummary
         id="project-4"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
@@ -218,7 +230,7 @@ export const Home = () => {
         index={5}
         title="VibeChat - Real-Time Chat Application"
         description="Developed a dynamic chat application with real-time messaging using WebSockets. Built a responsive frontend and scalable backend to ensure seamless communication."
-        technologies= "React.js, Node.js, Express.js, MongoDB, WebSockets(for message notifications)"
+        technologies="React.js, Node.js, Express.js, MongoDB, WebSockets(for message notifications)"
         buttonText="View project"
         buttonLink="https://github.com/Iqra-F/VibeChat-MERN-ChatApp"
         model={{
@@ -232,11 +244,32 @@ export const Home = () => {
           ],
         }}
       />
-       <ProjectSummary
+      <ProjectSummary
         id="project-6"
         sectionRef={projectSix}
         visible={visibleSections.includes(projectSix.current)}
         index={6}
+        title="Task Manager App – Real-Time Collaboration with WebSockets"
+        description="A full-stack task management app with real-time updates via Socket.IO, built using Next.js, Node.js, and MongoDB. It features secure JWT authentication, task CRUD operations, a responsive dashboard, dark/light mode, and smooth animations for an enhanced user experience."
+        technologies="Next.js, Node.js, Express.js, MongoDB, WebSockets, Tailwind CSS"
+        buttonText="View project"
+        buttonLink="https://task-manager-app-five-flax.vercel.app/"
+        model={{
+          type: 'laptop',
+          alt: 'Task-app',
+          textures: [
+            {
+              srcSet: `${taskApp} 800w, ${taskApp} 1920w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-7"
+        sectionRef={projectSeven}
+        visible={visibleSections.includes(projectSeven.current)}
+        index={7}
         title="Full-Stack Bookstore Application"
         description="Built a comprehensive online bookstore with features to view and manage book categories. Developed a robust backend and user-friendly UI."
         technologies="React.js, Node.js, Express.js, MongoDB, Tailwind CSS"
