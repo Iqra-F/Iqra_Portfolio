@@ -145,7 +145,7 @@ export const Contact = () => {
           <Form
             unstable_viewTransition
             className={styles.form}
-            method="post"
+            // method="post"
             ref={nodeRef}
           >
             <Heading
